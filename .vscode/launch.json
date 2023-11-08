@@ -4,7 +4,7 @@
 		{
 			"name": "Launch MultiplayerCourse (Debug)",
 			"request": "launch",
-			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
 			"preLaunchTask": "MultiplayerCourse Win64 Debug Build",
 			"args": [
 			],
@@ -20,7 +20,7 @@
 		{
 			"name": "Launch MultiplayerCourse (DebugGame)",
 			"request": "launch",
-			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
 			"preLaunchTask": "MultiplayerCourse Win64 DebugGame Build",
 			"args": [
 			],
@@ -36,7 +36,7 @@
 		{
 			"name": "Launch MultiplayerCourse (Development)",
 			"request": "launch",
-			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame.exe",
+			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame.exe",
 			"preLaunchTask": "MultiplayerCourse Win64 Development Build",
 			"args": [
 			],
@@ -52,7 +52,7 @@
 		{
 			"name": "Launch MultiplayerCourse (Test)",
 			"request": "launch",
-			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
 			"preLaunchTask": "MultiplayerCourse Win64 Test Build",
 			"args": [
 			],
@@ -68,7 +68,7 @@
 		{
 			"name": "Launch MultiplayerCourse (Shipping)",
 			"request": "launch",
-			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+			"program": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
 			"preLaunchTask": "MultiplayerCourse Win64 Shipping Build",
 			"args": [
 			],
@@ -87,7 +87,7 @@
 			"program": "E:\\Epic Games\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
 			"preLaunchTask": "MultiplayerCourseEditor Win64 Debug Build",
 			"args": [
-				"C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse.uproject"
+				"C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\MultiplayerCourse.uproject"
 			],
 			"cwd": "E:\\Epic Games\\UE_5.2",
 			"stopAtEntry": false,
@@ -104,7 +104,7 @@
 			"program": "E:\\Epic Games\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
 			"preLaunchTask": "MultiplayerCourseEditor Win64 DebugGame Build",
 			"args": [
-				"C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse.uproject"
+				"C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\MultiplayerCourse.uproject"
 			],
 			"cwd": "E:\\Epic Games\\UE_5.2",
 			"stopAtEntry": false,
@@ -121,7 +121,7 @@
 			"program": "E:\\Epic Games\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
 			"preLaunchTask": "MultiplayerCourseEditor Win64 Development Build",
 			"args": [
-				"C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse.uproject"
+				"C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\MultiplayerCourse.uproject"
 			],
 			"cwd": "E:\\Epic Games\\UE_5.2",
 			"stopAtEntry": false,
@@ -140,7 +140,7 @@
 			"args": [
 				"-projectfiles",
 				"-vscode",
-				"-project=C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse.uproject",
+				"-project=C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\MultiplayerCourse.uproject",
 				"-game",
 				"-engine"
 			],

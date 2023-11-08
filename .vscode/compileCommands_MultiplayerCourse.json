@@ -1,57 +1,57 @@
 [
 	{
-		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourse.Build.cs",
+		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourse.Build.cs",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
+			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
 		],
 		"directory": "E:\\Epic Games\\UE_5.2\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourse.cpp",
+		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourse.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
+			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
 		],
 		"directory": "E:\\Epic Games\\UE_5.2\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourse.h",
+		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourse.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
+			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
 		],
 		"directory": "E:\\Epic Games\\UE_5.2\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseCharacter.cpp",
+		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseCharacter.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
+			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
 		],
 		"directory": "E:\\Epic Games\\UE_5.2\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseCharacter.h",
+		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseCharacter.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
+			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
 		],
 		"directory": "E:\\Epic Games\\UE_5.2\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseGameMode.cpp",
+		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseGameMode.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
+			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
 		],
 		"directory": "E:\\Epic Games\\UE_5.2\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseGameMode.h",
+		"file": "C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\Source\\MultiplayerCourse\\MultiplayerCourseGameMode.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
+			"@C:\\Users\\Jon10\\OneDrive\\Documents\\GitHub\\Unreal Projects\\MultiplayerCourse\\MultiplayerCourse\\.vscode\\compileCommands_MultiplayerCourse\\MultiplayerCourse.261.rsp"
 		],
 		"directory": "E:\\Epic Games\\UE_5.2\\Engine\\Source"
 	}
