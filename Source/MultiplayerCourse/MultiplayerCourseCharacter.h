@@ -40,6 +40,17 @@ class AMultiplayerCourseCharacter : public ACharacter
 public:
 	AMultiplayerCourseCharacter();
 	
+	/** Returns CameraBoom subobject **/
+	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+	/** Returns FollowCamera subobject **/
+	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	// server rpcs are called on the client, executed on server
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
+	void ServerRPCFunction(int MyArg);
+
+	UPROPERTY(EditAnywhere)
+	UStaticMesh* SphereMesh;
 
 protected:
 
@@ -49,18 +60,13 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 			
-
-protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
 	// To add mapping context
 	virtual void BeginPlay();
 
-public:
-	/** Returns CameraBoom subobject **/
-	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
-	/** Returns FollowCamera subobject **/
-	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	
 };
 

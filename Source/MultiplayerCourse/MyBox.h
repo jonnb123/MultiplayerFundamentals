@@ -22,11 +22,19 @@ public:
 	UPROPERTY(ReplicatedUsing = OnRep_ReplicatedVar, BlueprintReadWrite)
 	float ReplicatedVar;
 
+	// called when ReplicatedVar changes on the client automatically, needs to be called manually for the server
 	UFUNCTION(BlueprintCallable)
 	void OnRep_ReplicatedVar();
 
+	// multicast rpcs are called from the server, then executed on the clients and server
+	UFUNCTION(NetMulticast, Reliable, BlueprintCallable)
+	void MulticastRPCExplode();
+
 	// you have to use this for replicated variables, just copy and paste from another project. This is from the Actor class, this does the replication for us
 	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+	void DecreaseReplicatedVar();
+	FTimerHandle TestTimer;
 
 protected:
 	// Called when the game starts or when spawned
