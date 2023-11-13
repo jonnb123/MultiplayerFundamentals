@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MyBox.h"
+
+#include "Kismet/GameplayStatics.h"
 #include "Net/UnrealNetwork.h"
 
 // Sets default values
@@ -24,7 +26,6 @@ void AMyBox::BeginPlay()
 	{
 		// GetWorld()->GetTimerManager().SetTimer(TestTimer, this, &AMyBox::DecreaseReplicatedVar, 2.0f, false);
 		GetWorld()->GetTimerManager().SetTimer(TestTimer, this, &AMyBox::MulticastRPCExplode, 2.0f, false);
-
 	}
 }
 
@@ -61,14 +62,22 @@ void AMyBox::OnRep_ReplicatedVar()
 
 void AMyBox::MulticastRPCExplode_Implementation()
 {
-	if (HasAuthority())
+	if (HasAuthority()) // is the server
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 3.0, FColor::Red, TEXT("Server: MulticastRPCExplode_Implementation"));
+		// GEngine->AddOnScreenDebugMessage(-1, 3.0, FColor::Red, TEXT("Server: MulticastRPCExplode_Implementation"));
 		GetWorld()->GetTimerManager().SetTimer(TestTimer, this, &AMyBox::MulticastRPCExplode, 2.0f, false);
 	}
-	else
+	else // is the client
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 3.0, FColor::Green, TEXT("Client: MulticastRPCExplode_Implementation"));
+		// GEngine->AddOnScreenDebugMessage(-1, 3.0, FColor::Green, TEXT("Client: MulticastRPCExplode_Implementation"));
+		// we don't call multicast rpcs on the client
+	}
+
+	if (!IsRunningDedicatedServer())
+	{
+		const FVector SpawnLocation = GetActorLocation() + FVector(0,0,200);
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionEffect, SpawnLocation,FRotator::ZeroRotator,
+			true,EPSCPoolMethod::AutoRelease);
 	}
 }
 

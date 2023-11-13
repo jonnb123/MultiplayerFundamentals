@@ -49,6 +49,13 @@ public:
 	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void ServerRPCFunction(int MyArg);
 
+	// client rpcs are called on the server, executed on a specific client
+	UFUNCTION(Client, Reliable, BlueprintCallable)
+	void ClientRPCFunction();
+
+	UPROPERTY(EditAnywhere)
+	UParticleSystem* ClientParticles;
+
 	UPROPERTY(EditAnywhere)
 	UStaticMesh* SphereMesh;
 

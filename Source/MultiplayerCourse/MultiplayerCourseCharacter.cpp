@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "Net/UnrealNetwork.h"
 #include "Engine/StaticMeshActor.h"
+#include "Kismet/GameplayStatics.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AMultiplayerCourseCharacter
@@ -58,7 +59,7 @@ void AMultiplayerCourseCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	// Add Input Mapping Context
-	if (APlayerController *PlayerController = Cast<APlayerController>(Controller))
+	if (const APlayerController *PlayerController = Cast<APlayerController>(Controller))
 	{
 		if (UEnhancedInputLocalPlayerSubsystem *Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
 		{
@@ -88,10 +89,20 @@ void AMultiplayerCourseCharacter::SetupPlayerInputComponent(class UInputComponen
 	}
 }
 
+void AMultiplayerCourseCharacter::ClientRPCFunction_Implementation()
+{
+	if (ClientParticles)
+	{
+		const FVector SpawnLocation = GetActorLocation();
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ClientParticles, SpawnLocation, FRotator::ZeroRotator,
+		                                         true, EPSCPoolMethod::AutoRelease);
+	}
+}
+
 void AMultiplayerCourseCharacter::Move(const FInputActionValue &Value)
 {
 	// input is a Vector2D
-	FVector2D MovementVector = Value.Get<FVector2D>();
+	const FVector2D MovementVector = Value.Get<FVector2D>();
 
 	if (Controller != nullptr)
 	{
@@ -127,7 +138,7 @@ void AMultiplayerCourseCharacter::Look(const FInputActionValue &Value)
 // note you have to append _Implmentation for RPC functions. We Only want to call server rpcs from the client
 void AMultiplayerCourseCharacter::ServerRPCFunction_Implementation(int MyArg)
 {
-	// because it's a serverRPC it's exectued on the server, i.e. it should always have authority
+	// because it's a serverRPC it's executed on the server, i.e. it should always have authority
 	if (HasAuthority())
 	{
 #if 0
@@ -138,16 +149,18 @@ void AMultiplayerCourseCharacter::ServerRPCFunction_Implementation(int MyArg)
 		{
 			return;
 		}
-		AStaticMeshActor* StaticMeshActor = GetWorld()->SpawnActor<AStaticMeshActor>(AStaticMeshActor::StaticClass());
-		if (StaticMeshActor)
+
+		FActorSpawnParameters SpawnParameters;
+		SpawnParameters.Owner = this;
+
+		if (AStaticMeshActor* StaticMeshActor = GetWorld()->SpawnActor<AStaticMeshActor>(SpawnParameters))
 		{
 			StaticMeshActor->SetReplicates(true);
 			StaticMeshActor->SetReplicateMovement(true);
 			StaticMeshActor->SetMobility(EComponentMobility::Movable);
-			FVector SpawnLocation = GetActorLocation() + GetActorRotation().Vector() * 100.0f + GetActorUpVector() * 50.0f;
+			const FVector SpawnLocation = GetActorLocation() + GetActorRotation().Vector() * 100.0f + GetActorUpVector() * 50.0f;
 			StaticMeshActor->SetActorLocation(SpawnLocation);
-			UStaticMeshComponent* StaticMeshComponent = StaticMeshActor->GetStaticMeshComponent();
-			if (StaticMeshComponent)
+			if (UStaticMeshComponent* StaticMeshComponent = StaticMeshActor->GetStaticMeshComponent())
 			{
 				StaticMeshComponent->SetIsReplicated(true);
 				StaticMeshComponent->SetSimulatePhysics(true);

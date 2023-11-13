@@ -36,6 +36,9 @@ public:
 	void DecreaseReplicatedVar();
 	FTimerHandle TestTimer;
 
+	UPROPERTY(EditAnywhere)
+	UParticleSystem* ExplosionEffect;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
