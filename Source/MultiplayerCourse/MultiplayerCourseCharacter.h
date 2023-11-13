@@ -45,6 +45,15 @@ public:
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
+	// USE RPCS sparingly, use RepNotify where possible
+	// If you call an RPC often make it Unreliable, i.e. on Tick
+	// See MyBox.h for Multicast RPC
+	// DON'T DO THE FOLLOWING WITH RPCs, i.e.:
+	// Client RPC called on client
+	// client RPC called on server on server-owned/unowned actor
+	// Server RPC called on server
+	// Multicast RPC called on Client
+	
 	// server rpcs are called on the client, executed on server
 	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void ServerRPCFunction(int MyArg);

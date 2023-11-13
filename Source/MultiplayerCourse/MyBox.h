@@ -27,6 +27,7 @@ public:
 	void OnRep_ReplicatedVar();
 
 	// multicast rpcs are called from the server, then executed on the clients and server
+	// use multicast rpcs sparingly, as they create a lot of network traffic.
 	UFUNCTION(NetMulticast, Reliable, BlueprintCallable)
 	void MulticastRPCExplode();
 
